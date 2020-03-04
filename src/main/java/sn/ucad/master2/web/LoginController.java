@@ -10,6 +10,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -52,7 +53,7 @@ public class LoginController {
 	}
 
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
-	public ModelAndView createNewUser(@Valid Utilisateur user, BindingResult bindingResult) {
+	public ModelAndView createNewUser (@ModelAttribute("user") @Valid Utilisateur user, BindingResult bindingResult) {
 		ModelAndView modelAndView = new ModelAndView();
 		Utilisateur userExists = userService.findUserByEmail(user.getEmail());
 		if (userExists != null) {
