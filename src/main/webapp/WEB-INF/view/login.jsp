@@ -58,10 +58,10 @@
 		</div>
 
 		<div class="row">
-			<p class="col-md-6">
+			<!-- <p class="col-md-6">
 				<a href="/" th:href="@{/}">Back to home page</a>
-			</p>
-			<p class="col-md-6 text-right">
+			</p> -->
+			<p class="col-md-6 col-md-offset-6 text-right">
 				<a href="/registration">S'inscrire</a>
 			</p>
 		</div>

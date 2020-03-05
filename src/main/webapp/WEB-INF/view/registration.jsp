@@ -62,19 +62,24 @@
 						    	</div>
 						  	</div>
 							<div class="form-group row align-items-center">
-								<div class="col-sm-12">
+								<div class="col-sm-4 col-sm-offset-4">
 									<button type="submit" class="btn btn-primary btn-block">Register User</button>
 								</div>
 							</div>
-							<div class="form-group row align-items-center">
+							<!-- <div class="form-group row align-items-center">
 								<div class="col-sm-12 text-right">
 									<a href="/" class="btn btn-md btn-warning">Retour</a>
 								</div>
-							</div>
+							</div> -->
 						</form:form>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="row">
+			<p class="col-md-6">
+				<a href="/" th:href="@{/}">Back to home page</a>
+			</p>
 		</div>
 	</div>
 

@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,7 +44,7 @@ public class LoginController {
 		return new ResponseEntity<Utilisateur>(user, HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/registration", method = RequestMethod.GET)
+	@GetMapping(value = "/registration")
 	public ModelAndView registration() {
 		ModelAndView modelAndView = new ModelAndView();
 		Utilisateur user = new Utilisateur();
@@ -52,7 +53,7 @@ public class LoginController {
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/registration", method = RequestMethod.POST)
+	@PostMapping(value = "/registration")
 	public ModelAndView createNewUser (@ModelAttribute("user") @Valid Utilisateur user, BindingResult bindingResult) {
 		ModelAndView modelAndView = new ModelAndView();
 		Utilisateur userExists = userService.findUserByEmail(user.getEmail());
