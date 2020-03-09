@@ -33,6 +33,12 @@
 							</tr>
 						</c:forEach>
 					</table>
+				<div sec:authorize="hasRole('ROLE_ADMIN')">This content is
+					only shown to administrators.</div>
+
+				<div sec:authorize="hasRole('ROLE_USER')">This content is only
+					shown to users.</div>
+				<c:out value="${userName}" />
 			</div>
 		</div>
 	</div>

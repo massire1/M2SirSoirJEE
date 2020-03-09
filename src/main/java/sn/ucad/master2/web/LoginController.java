@@ -26,11 +26,39 @@ public class LoginController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
+	@GetMapping(value = { "/", "/login" })
 	public ModelAndView login() {
+		
+//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//		if (auth == null)
+//			return new ModelAndView("redirect:/home");
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("login");
 		return modelAndView;
+	}
+	
+	@GetMapping(value = {"/home"})
+	public ModelAndView home() {
+		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth == null)
+			return new ModelAndView("redirect:/login");
+		else {
+			ModelAndView modelAndView = new ModelAndView();
+			Utilisateur user = userService.findUserByEmail(auth.getName());
+//			modelAndView.addObject("userName",
+//					"Welcome " + user.getName() + " " + user.getLastName() + " (" + user.getEmail() + ")");
+//			modelAndView.addObject("adminMessage", "Content Available Only for Users with Admin Role");
+//			return new ModelAndView("redirect:/listProduits");
+			if (user == null)
+				return new ModelAndView("redirect:/login");
+			
+			modelAndView.addObject("userConnected", user);
+			modelAndView.setViewName("home");
+			return modelAndView;
+
+		}
+
 	}
 
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
@@ -73,22 +101,7 @@ public class LoginController {
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public ModelAndView home() {
-
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		if (auth == null)
-			return new ModelAndView("redirect:/login");
-		else {
-			// ModelAndView modelAndView = new ModelAndView();
-//			Utilisateur user = userService.findUserByEmail(auth.getName());
-//			modelAndView.addObject("userName", "Welcome " + user.getName() + " " + user.getLastName() + " (" + user.getEmail() + ")");
-//			modelAndView.addObject("adminMessage","Content Available Only for Users with Admin Role");
-			// modelAndView.setViewName("listProduit");
-			return new ModelAndView("redirect:/listProduits");
-		}
-
-	}
+	
 
 	@GetMapping("/acces-interdit")
 	public String accessDenied() {

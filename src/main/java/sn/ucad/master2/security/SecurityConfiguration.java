@@ -61,10 +61,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 		// /userInfo page requires login as ROLE_USER or ROLE_ADMIN.
 		// If no login, it will redirect to /login page.
-		http.authorizeRequests().antMatchers("/listProduits").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+		http.authorizeRequests().antMatchers("/listProduits").hasAnyRole("USER", "ADMIN");
 
 		// For ADMIN only.
-		http.authorizeRequests().antMatchers("/saveProduit", "/addProduits").access("hasRole('ROLE_ADMIN')");
+		http.authorizeRequests().antMatchers("/saveProduit", "/addProduits").hasRole("ADMIN");
 
 		// When the user has logged in as XX.
 		// But access a page that requires role YY,

@@ -1,0 +1,5 @@
+les sessions avec spring boot
+
+des que connecté recuper les infos de l'utilisateur et la mettre dans la session
+templating layout de la page d'accueil: header footer left content
+breadcumbs
