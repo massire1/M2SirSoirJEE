@@ -65,6 +65,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 		// For ADMIN only.
 		http.authorizeRequests().antMatchers("/saveProduit", "/addProduits").hasRole("ADMIN");
+		
+		// Pour le declarant
+		http.authorizeRequests().antMatchers("/addDeclaration", "/listDeclarations").hasAnyRole("USER", "ADMIN");
 
 		// When the user has logged in as XX.
 		// But access a page that requires role YY,
@@ -79,7 +82,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.loginPage("/login").defaultSuccessUrl("/home").failureUrl("/login?error=true")
 				.usernameParameter("email").passwordParameter("password")
 				// Config for Logout Page
-				.and().logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout=true");
+				.and().logout().logoutUrl("/logout").logoutSuccessUrl("/login?logout=true").invalidateHttpSession(true);
 
 	}
 

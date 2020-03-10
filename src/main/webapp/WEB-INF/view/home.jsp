@@ -9,23 +9,14 @@
 	<%@include file="decorator/header.jsp"%>
 	<div class="container col-md-12">
 		<div class="col-md-3">
-			<div class="list-group">
-				<a href="#" class="list-group-item disabled">Menu principal</a> 
-				<a href="addProduits" class="list-group-item">Saisie Produit</a>
-				<a href="listProduits" class="list-group-item">Liste Produit</a></li>
-				<a href="#" class="list-group-item">Dapibus ac facilisis in</a> 
-				<a href="#" class="list-group-item">Morbi leo risus</a> 
-				<a href="#" class="list-group-item">Porta ac consectetur ac</a> 
-				<a href="#" class="list-group-item">Vestibulum at eros</a>
-			</div>
+			<%@ include file="decorator/left.jsp"%>
 		</div>
 		<div class="col-md-9">
 			<div class="jumbotron">
-				<h1>Hello, world!</h1>
+				<h1>Welcome, dashboard!</h1>
 				<p>...</p>
 				<p>
-					<a class="btn btn-primary btn-lg" href="#" role="button">Learn
-						more</a>
+					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 				</p>
 			</div>
 		</div>

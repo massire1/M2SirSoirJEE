@@ -6,8 +6,7 @@
 <title>Liste-Produit</title>
 </head>
 <body>
-	<%@include file="decorator/header.jsp" %>
-	<p></p>
+	<%@ include file="decorator/header.jsp" %>
 	<div class="container col-md-10 col-md-offset-1">
 		<div class="panel panel-primary">
 			<div class="panel-heading">Liste des Produits</div>

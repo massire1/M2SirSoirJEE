@@ -11,9 +11,17 @@
     
 </head>
 <body>
-<div layout:fragment="content" th:remove="tag">
-    <h1>Access denied</h1>
-    <p><a href="/" th:href="@{/}">Retour à la page de connexion</a></p>
-</div>
+	<%@include file="decorator/header.jsp"%>
+	
+	<div class="container col-md-6 col-md-offset-3">
+			<div class="jumbotron">
+				<h1 class="text-danger">Access denied !</h1>
+				<div class="alert alert-danger" role="alert">
+					<strong>Oh snap! </strong> 
+					You gotta get the hell out here as fast as possible
+				</div>
+				<p><a href="/home" class="btn btn-danger btn-lg">Retour</a></p>
+			</div>
+		</div>
 </body>
 </html>

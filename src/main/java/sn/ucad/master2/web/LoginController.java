@@ -1,5 +1,6 @@
 package sn.ucad.master2.web;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,30 +30,27 @@ public class LoginController {
 	@GetMapping(value = { "/", "/login" })
 	public ModelAndView login() {
 		
-//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//		if (auth == null)
-//			return new ModelAndView("redirect:/home");
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("login");
 		return modelAndView;
 	}
 	
 	@GetMapping(value = {"/home"})
-	public ModelAndView home() {
+	public ModelAndView home(HttpServletRequest request) {
 		
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		if (auth == null)
 			return new ModelAndView("redirect:/login");
-		else {
-			ModelAndView modelAndView = new ModelAndView();
+		
+		else {			
 			Utilisateur user = userService.findUserByEmail(auth.getName());
-//			modelAndView.addObject("userName",
-//					"Welcome " + user.getName() + " " + user.getLastName() + " (" + user.getEmail() + ")");
-//			modelAndView.addObject("adminMessage", "Content Available Only for Users with Admin Role");
-//			return new ModelAndView("redirect:/listProduits");
+			
 			if (user == null)
 				return new ModelAndView("redirect:/login");
 			
+			request.getSession().setAttribute("userConnected", user);
+			
+			ModelAndView modelAndView = new ModelAndView();
 			modelAndView.addObject("userConnected", user);
 			modelAndView.setViewName("home");
 			return modelAndView;
@@ -100,8 +98,6 @@ public class LoginController {
 		}
 		return modelAndView;
 	}
-
-	
 
 	@GetMapping("/acces-interdit")
 	public String accessDenied() {
