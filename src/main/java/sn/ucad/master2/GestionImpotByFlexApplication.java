@@ -8,32 +8,38 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import sn.ucad.master2.dao.ICatalogueDaoRepository;
+import sn.ucad.master2.dao.IHabitationDaoRepository;
+import sn.ucad.master2.entities.Habitation;
+import sn.ucad.master2.entities.HabitationIndividuelle;
+import sn.ucad.master2.entities.HabitationProffessionnelle;
 import sn.ucad.master2.entities.Produit;
+import sn.ucad.master2.service.HabitationService;
 
 @SpringBootApplication
-public class GestionImpotByFlexApplication implements CommandLineRunner{
+public class GestionImpotByFlexApplication implements CommandLineRunner {
 
 	@Autowired
 	ICatalogueDaoRepository myCatalogueRepository;
-	
+
+	@Autowired
+	HabitationService habitationService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(GestionImpotByFlexApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		
-		myCatalogueRepository.save(new Produit("REF001", "ORDINATEUR", 350000, 12));
-		myCatalogueRepository.save(new Produit("REF002", "ECRAN", 75250, 20));
-		myCatalogueRepository.save(new Produit("REF003", "SCANER", 55333, 32));
-		myCatalogueRepository.save(new Produit("REF004", "CLAVIER", 433466, 15));
-		myCatalogueRepository.save(new Produit("REF005", "IMPRIMANTE", 65543, 100));
-		myCatalogueRepository.save(new Produit("REF006", "SOURIS", 1122, 100));
 
-		List<Produit> mesProduits = myCatalogueRepository.findAll();
+		habitationService.saveHabitation(new HabitationIndividuelle("aa", "aa", 12.0, 1, false));
+		habitationService.saveHabitation(new HabitationIndividuelle("aa", "aa", 12.0, 1, false));
+		habitationService.saveHabitation(new HabitationProffessionnelle("aa", "aa", 12.0, 1));
+		habitationService.saveHabitation(new HabitationProffessionnelle("aa", "aa", 12.0, 1));
 
-		for (Produit prod : mesProduits) {
-			System.out.println(prod.getDesignation());
+		List<Habitation> mesHabitations = habitationService.findAllHabitations();
+
+		for (Habitation habitation : mesHabitations) {
+			System.out.println(habitation.getProprietaire());
 		}
 	}
 

@@ -13,8 +13,7 @@ public class DroitAccesAspect {
 
 	@Before("execution(* sn.ucad.master2.service.*.*(..))")
 	public void before(JoinPoint joinPoint) {
-		// Advice
-		logger.info(" Verification de l'acces utilisateur ");
-		logger.info(" Autorisation d'executer  {}" + joinPoint.toString());
+//		logger.info(" Verification de l'acces utilisateur ");
+//		logger.info(" Autorisation d'executer  {}" + joinPoint.toString());
 	}
 }

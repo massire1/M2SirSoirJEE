@@ -15,14 +15,14 @@ public class ProfilageAop {
 	public Object profilingMethode(ProceedingJoinPoint jointPoint) throws Throwable {
 
 		long debut = System.currentTimeMillis();
-		logger.info("Appelle de la fonction .....");
-		System.out.println("Appelle de la fonction .....");
+//		logger.info("Appelle de la fonction .....");
+//		System.out.println("Appelle de la fonction .....");
 		Object sortie = jointPoint.proceed();
-		logger.info("Fonction execute avec succees.....");
-		System.out.println("Fonction execute avec succees .....");
+//		logger.info("Fonction execute avec succees.....");
+//		System.out.println("Fonction execute avec succees .....");
 		long tempsMis = System.currentTimeMillis() - debut;
-		logger.info("Temps d'execution de la fonction :" + tempsMis + "milliseconds");
-		System.out.println("Temps d'execution de la fonction :" + tempsMis + "milliseconds");
+//		logger.info("Temps d'execution de la fonction :" + tempsMis + "milliseconds");
+//		System.out.println("Temps d'execution de la fonction :" + tempsMis + "milliseconds");
 		return sortie;
 	}
 
