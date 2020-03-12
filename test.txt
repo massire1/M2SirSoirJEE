@@ -1,5 +1,8 @@
-les sessions avec spring boot
+Le compte administrateur a tous les droits
+admin@test.com/passer
 
-des que connecté recuper les infos de l'utilisateur et la mettre dans la session
-templating layout de la page d'accueil: header footer left content
-breadcumbs
+Le compte user est disponible en remplissant le formulaire
+d'inscription disponible sur la page d'accueil
+Une fois inscrit le compte user peut:
+- consulter la liste des déclarations saisies
+- saisir une nouvelle déclaration(Habitation Individuelle/Professionnelle)

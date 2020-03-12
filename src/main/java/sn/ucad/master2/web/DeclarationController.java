@@ -16,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 import sn.ucad.master2.entities.Habitation;
 import sn.ucad.master2.entities.HabitationIndividuelle;
 import sn.ucad.master2.entities.HabitationProffessionnelle;
-import sn.ucad.master2.entities.Produit;
 import sn.ucad.master2.service.HabitationService;
 
 @Controller
