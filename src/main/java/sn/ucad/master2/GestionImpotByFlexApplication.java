@@ -31,16 +31,18 @@ public class GestionImpotByFlexApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		habitationService.saveHabitation(new HabitationIndividuelle("aa", "aa", 12.0, 1, false));
-		habitationService.saveHabitation(new HabitationIndividuelle("aa", "aa", 12.0, 1, false));
-		habitationService.saveHabitation(new HabitationProffessionnelle("aa", "aa", 12.0, 1));
-		habitationService.saveHabitation(new HabitationProffessionnelle("aa", "aa", 12.0, 1));
+//		habitationService.saveHabitation(new HabitationIndividuelle("aa", "aa", 12.0, 1, false));
+//		habitationService.saveHabitation(new HabitationIndividuelle("aa", "aa", 12.0, 1, false));
+//		habitationService.saveHabitation(new HabitationProffessionnelle("aa", "aa", 12.0, 1));
+//		habitationService.saveHabitation(new HabitationProffessionnelle("aa", "aa", 12.0, 1));
 
-		List<Habitation> mesHabitations = habitationService.findAllHabitations();
-
-		for (Habitation habitation : mesHabitations) {
-			System.out.println(habitation.getProprietaire());
-		}
+//		List<Habitation> mesHabitations = habitationService.findAllHabitations();
+//
+//		for (Habitation habitation : mesHabitations) {
+//			System.out.println(habitation.getProprietaire());
+//		}
+		
+		System.out.println("*************** APPLICATION DEMAREE *****************");
 	}
 
 }

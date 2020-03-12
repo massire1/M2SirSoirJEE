@@ -2,7 +2,14 @@
 <div class="list-group">
 	<a href="/home" class="list-group-item">Menu principal</a>
 	<a href="/listDeclarations" class="list-group-item">Déclarations impots</a> 
-	<a href="#" class="list-group-item">Morbi leo risus</a> 
-	<a href="/addProduits" class="list-group-item">Saisie Produit</a>
-	<a href="/listProduits" class="list-group-item">Liste Produit</a>
+	<a href="/addHabitationIndiv" class="list-group-item">Saisie Habitation Individuelle</a>
+	<a href="/addHabitationPro" class="list-group-item">Saisie Habitation Professionnelle</a>
 </div>
+
+<!-- <ul class="nav nav-pills nav-stacked">
+	<li role="presentation" class="active"><a href="/">Dashboard</a></li>
+	<li role="presentation"><a href="/listDeclarations">Déclarations impots</a></li>
+	<li role="presentation"><a href="#">Morbi leo risus</a></li>
+	<li role="presentation"><a href="/addProduits">Saisie Produit</a></li>
+	<li role="presentation"><a href="/listProduits">Liste Produit</a></li>
+</ul> -->

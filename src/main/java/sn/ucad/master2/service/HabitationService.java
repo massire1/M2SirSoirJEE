@@ -21,5 +21,7 @@ public interface HabitationService {
 	public void deleteHabitation(Long codeHabitation);
 	
 	public void deleteHabitation(Habitation habitation);
+	
+	public Double calculImpot(Habitation habitation);
 
 }

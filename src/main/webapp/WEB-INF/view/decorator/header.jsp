@@ -38,8 +38,6 @@
 				</a>
 					<ul class="dropdown-menu">
 						<li><a href="/home">Accueil</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
 						<li role="separator" class="divider"></li>
 						<li class=""><a href="/logout" class="btn btn-outline-success">Deconnexion</a></li>
 					</ul></li>

@@ -5,12 +5,17 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 @Entity
 @DiscriminatorValue("professionnelle")
 public class HabitationProffessionnelle extends Habitation implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
+	@NotNull(message = "*Veuillez remplir le nombre demployes")
+	@Positive
 	private int nbrEmploye;
 
 	public HabitationProffessionnelle() {

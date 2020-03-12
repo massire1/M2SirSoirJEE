@@ -11,6 +11,11 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "HABITATION")
@@ -22,8 +27,17 @@ public abstract class Habitation implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
 	private Long codeHabitation;
-	private String proprietaire, adresse;
+	
+	@NotBlank(message = "*Veuillez remplir le proprietaire")
+	private String proprietaire;
+	
+	@NotEmpty(message = "*Veuillez remplir ladresse")
+	private String adresse;
+	
+	@NotNull()
+	@Positive()
 	private double surface;
 
 	public Habitation() {

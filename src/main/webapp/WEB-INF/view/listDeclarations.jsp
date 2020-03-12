@@ -22,11 +22,10 @@
 			<%@ include file="decorator/left.jsp"%>
 		</div>
 		<div class="col-md-9">
-			<c:if test="${ success != null }">
+			<c:if test="${ not empty param.successMessage}">
 				<div class="alert alert-success text-center" role="alert">
-					Opération effectuée avec succés !
-					<button type="button" class="close" data-dismiss="alert"
-						aria-label="Close">
+					<c:out value = "${param.successMessage}" />
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
@@ -44,7 +43,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="panel panel-default">
+					<div class="panel panel-primary">
 						<div class="panel-heading">
 							<h3 class="panel-title">Habitations Individuelles</h3>
 						</div>
@@ -64,19 +63,19 @@
 							</tr>
 							<c:forEach items="${listeHabitIndivs}" var="myHabitIndiv">
 								<tr>
-									<td>${myHabitIndiv.codeHabitation}</td>
+									<td><strong>${myHabitIndiv.codeHabitation}</strong></td>
 									<td>${myHabitIndiv.proprietaire}</td>
 									<td>${myHabitIndiv.adresse}</td>
 									<td class="text-center">${myHabitIndiv.surface}</td>
 									<td class="text-center">${myHabitIndiv.nbrPiece}</td>
 									<td class="text-center">${myHabitIndiv.piscine}</td>
 									<td class="text-center">
-										<a href="/editHabitation?code=<c:out value="${myHabitIndiv.codeHabitation}"/>&success">
+										<a href="/editHabitation?code=<c:out value="${myHabitIndiv.codeHabitation}"/>">
 										<img src="images/pencil-small.png" /></a>
 									</td>
 									<td class="text-center">
 										<a onclick="return confirm('Etes vous sure de vouloir supprimer?')"
-										href="/deleteHabitation?code=<c:out value="${myHabitIndiv.codeHabitation}"/>&success">
+										href="/deleteHabitation?code=<c:out value="${myHabitIndiv.codeHabitation}"/>">
 										<img src="images/delete.png" /></a>
 									</td>
 								</tr>
@@ -85,7 +84,7 @@
 					</div>
 				</div>
 				<div class="col-md-12">
-					<div class="panel panel-default">
+					<div class="panel panel-primary">
 						<div class="panel-heading">
 							<h3 class="panel-title">Habitations Professionnelles</h3>
 						</div>
@@ -104,18 +103,18 @@
 							</tr>
 							<c:forEach items="${listeHabitPros}" var="myHabitPro">
 								<tr>
-									<td>${myHabitPro.codeHabitation}</td>
+									<td><strong>${myHabitPro.codeHabitation}</strong></td>
 									<td>${myHabitPro.proprietaire}</td>
 									<td>${myHabitPro.adresse}</td>
 									<td class="text-center">${myHabitPro.surface}</td>
 									<td class="text-center">${myHabitPro.nbrEmploye}</td>
 									<td class="text-center">
-										<a href="/editHabitation?code=<c:out value="${myHabitPro.codeHabitation}"/>&success">
+										<a href="/editHabitation?code=<c:out value="${myHabitPro.codeHabitation}"/>">
 										<img src="images/pencil-small.png" /></a>
 									</td>
 									<td class="text-center">
 										<a onclick="return confirm('Etes vous sure de vouloir supprimer?')"
-										href="/deleteHabitation?code=<c:out value="${myHabitPro.codeHabitation}"/>&success">
+										href="/deleteHabitation?code=<c:out value="${myHabitPro.codeHabitation}"/>">
 										<img src="images/delete.png" /></a>
 									</td>
 								</tr>

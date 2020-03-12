@@ -5,13 +5,19 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 @Entity
 @DiscriminatorValue("individuelle")
 public class HabitationIndividuelle extends Habitation implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
+	@NotNull(message = "*Veuillez remplir le nombre de pièces")
+	@Positive()
 	private int nbrPiece;
+
 	private boolean piscine;
 
 	public HabitationIndividuelle() {
