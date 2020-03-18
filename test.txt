@@ -1,8 +1,10 @@
 Le compte administrateur a tous les droits
 admin@test.com/passer
 
-Le compte user est disponible en remplissant le formulaire
+Le compte user peut etre cree en remplissant le formulaire
 d'inscription disponible sur la page d'accueil
+
 Une fois inscrit le compte user peut:
 - consulter la liste des déclarations saisies
 - saisir une nouvelle déclaration(Habitation Individuelle/Professionnelle)
+- le compte user ne peut pas modifier une déclaration, ni supprimer
