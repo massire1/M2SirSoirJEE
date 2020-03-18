@@ -38,6 +38,14 @@
 			</div>
 			<div class="col-sm-offset-3 col-sm-9"><small class="form-text text-danger"><form:errors path="nbrEmploye" /></small></div>
 	</div>
+	<c:if test="${ not empty impotAPayer}">
+		<div class="form-group row align-items-center">
+			<label for="colFormLabelSm" class="col-sm-3 col-form-label col-form-label-sm text-right text-danger">Impot a payer</label>
+			<div class="col-sm-9">
+				<span class="label label-danger"><c:out value = "${impotAPayer}" /></span>  <span class="small">FCFA</span>
+			</div>
+		</div>
+	</c:if>
 	<div class="form-group row align-items-center">
 		<div class="col-sm-4 col-sm-offset-3">
 			<button type="submit" class="btn btn-warning">Enregistrer</button>

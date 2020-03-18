@@ -70,6 +70,13 @@ public class DeclarationController {
 		
 		model.addObject("isHabitIndivBool", isIndiv);
 		
+//		String calculImpot = request.getParameter("calculImpot");
+
+//		if (calculImpot != null && !calculImpot.isEmpty()) {
+			Double impotAPayer = habitationService.calculImpot(habitation);
+			model.addObject("impotAPayer", impotAPayer);
+//		}
+		
 		return model;
 	}
 	

@@ -31,7 +31,7 @@
 				</div>
 			</c:if>
 			<h1>Déclarations
-				<a href="/addDeclaration" class="btn btn-primary bt-sm pull-right">Ajouter</a>
+				<!-- <a href="/addDeclaration" class="btn btn-primary bt-sm pull-right">Ajouter</a> -->
 			</h1>
 			<div class="row">
 				<div class="col-md-12">

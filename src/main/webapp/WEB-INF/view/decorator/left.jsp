@@ -4,6 +4,7 @@
 	<a href="/listDeclarations" class="list-group-item">Déclarations impots</a> 
 	<a href="/addHabitationIndiv" class="list-group-item">Saisie Habitation Individuelle</a>
 	<a href="/addHabitationPro" class="list-group-item">Saisie Habitation Professionnelle</a>
+	<a href="/listUsers" class="list-group-item">Gestion des utilisateurs</a>
 </div>
 
 <!-- <ul class="nav nav-pills nav-stacked">
