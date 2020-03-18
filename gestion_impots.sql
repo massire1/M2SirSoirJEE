@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 12 mars 2020 à 18:40
+-- Généré le :  mer. 18 mars 2020 à 18:17
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -46,9 +46,9 @@ CREATE TABLE IF NOT EXISTS `habitation` (
 --
 
 INSERT INTO `habitation` (`champhabitation`, `code_habitation`, `adresse`, `proprietaire`, `surface`, `nbrpiece`, `piscine`, `nbremploye`) VALUES
-('individuelle', 30, 'Dakar, Médina ', 'Massiré DIA', 1200, 100, b'0', NULL),
+('individuelle', 30, 'Dakar, Médina ', 'Massiré DIA', 1200, 1, b'0', NULL),
 ('individuelle', 31, 'Ouakam cité ASECNA', 'Abibatou DIOP', 200, 12, b'0', NULL),
-('professionnelle', 34, 'aa', 'aaa', 1, NULL, NULL, 11),
+('professionnelle', 34, 'Fadia Parcelles Assénies', 'Abdou Faye', 1, NULL, NULL, 11),
 ('professionnelle', 16, 'Dakar Rond point Parcelles', 'Oulimatou DIAGNE', 50, NULL, NULL, 500),
 ('individuelle', 14, 'Thiés Quartier médina fall', 'Mamadou GOUDIABY', 300, 4, b'0', NULL),
 ('professionnelle', 20, 'Saint-Louis goxumbathie villa 14', 'Moussa DIALLO', 800, NULL, NULL, 422);
@@ -69,8 +69,8 @@ CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
 --
 
 INSERT INTO `hibernate_sequence` (`next_val`) VALUES
-(44),
-(44);
+(45),
+(45);
 
 -- --------------------------------------------------------
 
