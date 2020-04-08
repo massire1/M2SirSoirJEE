@@ -29,8 +29,8 @@ public class HabitationServiceImpl implements HabitationService {
 	}
 
 	@Override
-	public void saveHabitation(Habitation habitation) {
-		habitationDaoRepository.save(habitation);
+	public Habitation saveHabitation(Habitation habitation) {
+		return habitationDaoRepository.save(habitation);
 	}
 
 	@Override
@@ -73,8 +73,11 @@ public class HabitationServiceImpl implements HabitationService {
 
 	@Override
 	public Double calculImpot(Habitation habitation) {
-		
+
 		Double montantTotal = 0.0;
+		
+		if (habitation==null)
+			return montantTotal;
 
 		if (habitation instanceof HabitationIndividuelle) {
 
@@ -89,15 +92,22 @@ public class HabitationServiceImpl implements HabitationService {
 			montantTotal += valPiscine;
 
 		} else {
-			
+
 			HabitationProffessionnelle myHabitationProf = (HabitationProffessionnelle) habitation;
-			
+
 			montantTotal = myHabitationProf.getSurface() * ConstanteUtil.VALMETTRECARRE;
 			montantTotal += (myHabitationProf.getNbrEmploye() / 10) * ConstanteUtil.VALTRANCHE;
 
 		}
 
 		return montantTotal;
+	}
+
+	@Override
+	public Double calculImpot(Long codeHabitation) {
+
+		Habitation habitation = findHabitationById(codeHabitation);
+		return calculImpot(habitation);
 	}
 
 }

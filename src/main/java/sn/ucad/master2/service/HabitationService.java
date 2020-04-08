@@ -16,12 +16,14 @@ public interface HabitationService {
 
 	public Habitation findHabitationById(Long codeHabitation);
 
-	public void saveHabitation(Habitation habitation);
+	public Habitation saveHabitation(Habitation habitation);
 
 	public void deleteHabitation(Long codeHabitation);
 	
 	public void deleteHabitation(Habitation habitation);
 	
 	public Double calculImpot(Habitation habitation);
+	
+	public Double calculImpot(Long codeHabitation);
 
 }
