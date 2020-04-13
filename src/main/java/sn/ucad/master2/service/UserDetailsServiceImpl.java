@@ -12,9 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import sn.ucad.master2.dao.IUserDaoRepository;
 import sn.ucad.master2.entities.Role;
 import sn.ucad.master2.entities.Utilisateur;
+import sn.ucad.master2.repository.IUserDaoRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

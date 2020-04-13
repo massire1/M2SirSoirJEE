@@ -1,4 +1,4 @@
-package sn.ucad.master2.dao;
+package sn.ucad.master2.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

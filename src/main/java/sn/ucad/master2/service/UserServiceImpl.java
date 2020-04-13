@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import sn.ucad.master2.dao.IRoleDaoRepository;
-import sn.ucad.master2.dao.IUserDaoRepository;
 import sn.ucad.master2.entities.Role;
 import sn.ucad.master2.entities.Utilisateur;
+import sn.ucad.master2.repository.IRoleDaoRepository;
+import sn.ucad.master2.repository.IUserDaoRepository;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

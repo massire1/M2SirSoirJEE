@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import sn.ucad.master2.constantes.ConstanteUtil;
-import sn.ucad.master2.dao.IHabitationDaoRepository;
 import sn.ucad.master2.entities.Habitation;
 import sn.ucad.master2.entities.HabitationIndividuelle;
 import sn.ucad.master2.entities.HabitationProffessionnelle;
+import sn.ucad.master2.repository.IHabitationDaoRepository;
 
 @Service("habitationService")
 public class HabitationServiceImpl implements HabitationService {

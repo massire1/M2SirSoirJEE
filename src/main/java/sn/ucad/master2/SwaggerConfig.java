@@ -37,4 +37,6 @@ public class SwaggerConfig {
 				.licenseUrl("diamasta@gmail.com").version("1.0").build();
 	}
 
+	// swagger UI URL: http://localhost:8080/swagger-ui.html
+	
 }

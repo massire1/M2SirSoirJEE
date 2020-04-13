@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import sn.ucad.master2.dao.ICatalogueDaoRepository;
 import sn.ucad.master2.entities.Produit;
+import sn.ucad.master2.repository.ICatalogueDaoRepository;
 
 /**
  * Servlet implementation class ProduitServletControleur

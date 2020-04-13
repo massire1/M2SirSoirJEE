@@ -1,4 +1,4 @@
-package sn.ucad.master2.web;
+package sn.ucad.master2.web.api;
 
 import java.util.List;
 
