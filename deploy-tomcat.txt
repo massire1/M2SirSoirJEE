@@ -1,0 +1,12 @@
+author @mastaflex
+
+3 etapes pour deployer l'appli spring boot sur un Tomcat externe
+
+1) pom.xml
+	- changer le packaging en 'war'
+	- decommenter la dependance du 'spring-boot-starter-tomcat' avec scope provided
+
+2) fichier 'main' GestionImpotByFlexApplication.java
+	- doit etendre ... 'extends SpringBootServletInitializer'
+	
+3) application.properties changer le context-root
