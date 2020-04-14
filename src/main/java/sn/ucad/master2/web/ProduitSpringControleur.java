@@ -31,7 +31,6 @@ public class ProduitSpringControleur {
 	 */
 	public ProduitSpringControleur() {
 		super();
-		// TODO Auto-generated constructor stub
 		// myDaoCatalogue = new CatalogueDaoImpl();
 	}
 

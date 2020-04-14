@@ -38,37 +38,30 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public Utilisateur findById(long id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public Utilisateur findByName(String name) {
-		// TODO Auto-generated method stub
 		return userRepository.findByName(name);
 	}
 
 	public void updateUser(Utilisateur user) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public void deleteUserById(long id) {
-		// TODO Auto-generated method stub
 		userRepository.deleteById(id);
 	}
 
 	public List<Utilisateur> findAllUsers() {
-		// TODO Auto-generated method stub
 		return userRepository.findAll();
 	}
 
 	public void deleteAllUsers() {
-		// TODO Auto-generated method stub
 		userRepository.deleteAll();
 	}
 
 	public boolean isUserExist(Utilisateur user) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
