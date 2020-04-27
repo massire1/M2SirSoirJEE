@@ -127,8 +127,10 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		
 		<!-- Nom final du livrable .war .jar -->
-		<finalName>${artifactId}</finalName>
+		<!-- <finalName>${artifactId}</finalName> -->
+		<finalName>gestion-impot-flex</finalName>
 	</build>
 
 </project>
