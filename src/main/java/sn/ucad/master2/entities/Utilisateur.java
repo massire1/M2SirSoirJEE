@@ -1,5 +1,6 @@
 package sn.ucad.master2.entities;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -22,7 +23,7 @@ import org.springframework.data.annotation.Transient;
 @Entity
 @Table(name = "User")
 //@EqualsAndHashCode(of = "userId")
-public class Utilisateur {
+public class Utilisateur implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
