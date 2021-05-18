@@ -10,4 +10,4 @@ Importer le projet avec Spring tool suite
   1. Vérifier que la connectivité avec la base de donnée est ok
   2. Clic droit sur le projet > run as > Spring Boot App
   3. Aller sur le navigateur > http://localhost:8080/
-  
+  4. Swagger disponible sur http://localhost:8080/swagger-ui.html
